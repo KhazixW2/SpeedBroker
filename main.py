@@ -17,7 +17,7 @@ if sys.platform == 'win32':
     except Exception as e:
         print(f"Warning: Failed to set UTF-8 encoding: {e}")
 
-from core.config import (
+from config.config import (
     DATA_CONFIG,
     STRATEGY_CONFIG,
     BACKTEST_CONFIG,
@@ -26,10 +26,10 @@ from core.config import (
 )
 
 # 导入各个模块
-from core.data_handler import DataHandler
+from data.data_handler import DataHandler
 from strategies.strategy import StrategyFactory
-from core.backtester import Backtester
-from core.analyzer import Analyzer
+from backtest.backtester import Backtester
+from backtest.analyzer import Analyzer
 
 
 def print_header():

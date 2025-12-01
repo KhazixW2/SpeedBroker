@@ -19,14 +19,14 @@ from pyqtgraph.exporters import ImageExporter
 import numpy as np
 
 # 导入回测系统模块
-from core.config import (
+from config.config import (
     DATA_CONFIG, STRATEGY_CONFIG, BACKTEST_CONFIG, ANALYSIS_CONFIG,
     config_manager
 )
-from core.data_handler import DataHandler
+from data.data_handler import DataHandler
 from strategies.strategy import StrategyFactory
-from core.backtester import Backtester
-from core.analyzer import Analyzer
+from backtest.backtester import Backtester
+from backtest.analyzer import Analyzer
 from utils.stock_list import StockDatabase
 
 
@@ -50,7 +50,7 @@ class CompareThread(QThread):
     def run(self):
         """执行策略对比"""
         try:
-            from core.strategy_comparator import StrategyComparator
+            from backtest.strategy_comparator import StrategyComparator
             
             self.progress_update.emit("🔄 初始化策略对比器...")
             

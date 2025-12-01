@@ -6,8 +6,8 @@
 import pandas as pd
 from datetime import datetime
 from strategies.strategy import StrategyFactory
-from core.backtester import Backtester
-from core.analyzer import Analyzer
+from backtest.backtester import Backtester
+from backtest.analyzer import Analyzer
 
 
 class StrategyComparator:
